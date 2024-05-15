@@ -1,0 +1,5 @@
+tests:
+  - name: "Compile Java Code"
+    command: "javac *.java"
+  - name: "Run JUnit Tests"
+    command: "java -cp .:/path/to/junit.jar:/path/to/hamcrest-core.jar org.junit.runner.JUnitCore TestClassName"
