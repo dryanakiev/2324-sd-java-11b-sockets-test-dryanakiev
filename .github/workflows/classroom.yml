@@ -1,5 +1,11 @@
-tests:
-  - name: "Compile Java Code"
-    command: "javac *.java"
-  - name: "Run JUnit Tests"
-    command: "java -cp .:/path/to/junit.jar:/path/to/hamcrest-core.jar org.junit.runner.JUnitCore TestClassName"
+runs-on: ubuntu-latest
+
+steps:
+  - name: Check out repository
+    uses: actions/checkout@v2
+
+  - name: Compile Java Code
+    run: javac *.java
+
+  - name: Run JUnit Tests
+    run: java -cp .:/path/to/junit.jar:/path/to/hamcrest-core.jar org.junit.runner.JUnitCore ClientTest.java
